@@ -1,0 +1,107 @@
+:root {
+  --bg-deep: #020617;
+  --bg-card: #0f172a;
+  --glow-purple: #8b5cf6;
+  --glow-blue: #3b82f6;
+  --text-main: #f8fafc;
+  --text-dim: #94a3b8;
+  --border: #1e293b;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-deep);
+  color: var(--text-main);
+  background-image: radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.05), transparent 80%);
+}
+
+.memory-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+.sidebar {
+  width: 400px;
+  background-color: var(--bg-card);
+  border-right: 1px solid var(--border);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.viewport {
+  flex: 1;
+  padding: 40px;
+  overflow-y: auto;
+}
+
+.glass-card {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 24px;
+  transition: all 0.3s;
+}
+
+.glass-card:hover {
+  border-color: var(--glow-purple);
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.1);
+}
+
+.search-bar {
+  width: 100%;
+  background: var(--bg-deep);
+  border: 1px solid var(--border);
+  color: var(--text-main);
+  padding: 16px;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 16px;
+  margin-bottom: 32px;
+}
+
+.search-bar:focus {
+  outline: none;
+  border-color: var(--glow-blue);
+}
+
+.memory-tag {
+  font-size: 10px;
+  text-transform: uppercase;
+  background: rgba(59, 130, 246, 0.1);
+  color: var(--glow-blue);
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-right: 8px;
+}
+
+.action-btn {
+  background: linear-gradient(135deg, var(--glow-purple), var(--glow-blue));
+  border: none;
+  color: white;
+  padding: 14px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.importance-bar {
+  height: 4px;
+  background: #334155;
+  border-radius: 2px;
+  margin-top: 12px;
+  position: relative;
+}
+
+.importance-fill {
+  height: 100%;
+  background: var(--glow-purple);
+  border-radius: 2px;
+  box-shadow: 0 0 10px var(--glow-purple);
+}
